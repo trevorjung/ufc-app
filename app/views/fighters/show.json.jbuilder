@@ -1,0 +1,1 @@
+json.partial! @fighter, partial: 'fighter', as: :fighter
