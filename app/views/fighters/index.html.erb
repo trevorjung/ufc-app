@@ -1,0 +1,41 @@
+<div ng-app="app">
+  <div ng-controller="fightersCtrl" ng-init="setup()">
+    <div ng-repeat="fighter in fighters">
+    <p> First Name: {{fighter.first_name}} </p>
+    <p> Last Name: {{fighter.last_name}} </p>
+    <p> Weight Class: {{fighter.weight_class}} </p>
+    <p> Weight: {{fighter.weight}} </p>
+    <p> Current Record: {{fighter.current_record}} </p>
+    <p> Current Titles: {{fighter.current_titles}} </p>
+    <p> Hometown: {{fighter.hometown}} </p>
+    <a href="#" ng-click="deletePerson($index)">Delete</a>
+    </div>
+      <div>
+        Add Fighter: 
+        <div>
+          First Name: <input ng-model="newFirstName">
+        </div>
+        <div>
+          Last Name: <input ng-model="newLastName">
+        </div>
+        <div>
+          Weight Class: <input ng-model="newWeightClass">
+        </div>
+        <div>
+          Weight: <input ng-model="newWeight">
+        </div>
+        <div>
+          Current Record: <input ng-model="newCurrentRecord">
+        </div>
+        <div>
+          Current Titles: <input ng-model="newCurrentTitles">
+        </div>
+        <div>
+          Hometown: <input ng-model="newHometown">
+        </div>
+        <div>
+          <button ng-click="addFighter(newFirstName, newLastName, newWeightClass, newWeight, newCurrentRecord, newCurrentTitles, newHometown)">Add Fighter</button>
+        </div>
+      </div>
+  </div>
+</div>
